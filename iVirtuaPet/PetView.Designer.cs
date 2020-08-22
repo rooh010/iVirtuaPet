@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetView));
             this.picBoxPetViewer = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnHappy = new System.Windows.Forms.Button();
+            this.btnSad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,25 +47,27 @@
             this.picBoxPetViewer.TabIndex = 0;
             this.picBoxPetViewer.TabStop = false;
             // 
-            // button1
+            // btnHappy
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(34, 505);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 59);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Happy";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnHappy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHappy.Location = new System.Drawing.Point(197, 505);
+            this.btnHappy.Name = "btnHappy";
+            this.btnHappy.Size = new System.Drawing.Size(125, 59);
+            this.btnHappy.TabIndex = 1;
+            this.btnHappy.Text = "Happy";
+            this.btnHappy.UseVisualStyleBackColor = false;
+            this.btnHappy.Click += new System.EventHandler(this.btnHappy_Click);
             // 
-            // button2
+            // btnSad
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(165, 505);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 59);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sad";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSad.Location = new System.Drawing.Point(355, 505);
+            this.btnSad.Name = "btnSad";
+            this.btnSad.Size = new System.Drawing.Size(137, 59);
+            this.btnSad.TabIndex = 2;
+            this.btnSad.Text = "Sad";
+            this.btnSad.UseVisualStyleBackColor = false;
+            this.btnSad.Click += new System.EventHandler(this.btnSad_Click);
             // 
             // PetView
             // 
@@ -73,8 +75,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(672, 603);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSad);
+            this.Controls.Add(this.btnHappy);
             this.Controls.Add(this.picBoxPetViewer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -88,8 +90,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picBoxPetViewer;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnHappy;
+        private System.Windows.Forms.Button btnSad;
     }
 }
 

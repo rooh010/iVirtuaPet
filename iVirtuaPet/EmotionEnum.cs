@@ -14,6 +14,7 @@ namespace iVirtuaPet
         Hungry,
         Indifferent,
         Sad,
-        Sleepy
+        Sleepy,
+        Unknown
     }
 }

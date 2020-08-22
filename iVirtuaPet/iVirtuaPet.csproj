@@ -98,6 +98,7 @@
     <Content Include="Assets\StockImages\indifferent.png" />
     <Content Include="Assets\StockImages\sad.png" />
     <Content Include="Assets\StockImages\sleepy.png" />
+    <Content Include="Assets\StockImages\unknown.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
