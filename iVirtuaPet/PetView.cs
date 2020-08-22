@@ -13,6 +13,8 @@ namespace iVirtuaPet
         {
             InitializeComponent();
 
+
+
             textBoxHungerLevel.ReadOnly = true;
             textBoxHungerLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
@@ -29,6 +31,7 @@ namespace iVirtuaPet
             PetObj.HungerChanged += HandleHungerChanged;
             PetObj.HappyChanged += HandleHappyChanged;
             PetObj.SleepChanged += HandleSleepChanged;
+            PetObj.LifeStateChanged += HandleLifeStateChanged;
         }
 
         private void HandleEmotionChanged(object sender, EventArgs e)
@@ -43,6 +46,11 @@ namespace iVirtuaPet
         private void HandleHungerChanged(object sender, EventArgs e)
         {
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
+        }
+
+        private void HandleLifeStateChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(PetObj.LifeState.ToString());
         }
 
         private void HandleHappyChanged(object sender, EventArgs e)
