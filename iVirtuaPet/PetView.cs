@@ -12,35 +12,39 @@ namespace iVirtuaPet
 {
     public partial class PetView : Form
     {
-        Pet TestPet = new Pet();
+        Pet PetObj = new Pet();
         
 
         public PetView()
         {
             InitializeComponent();
-            TestPet.EmotionChanged += HandleEmotionChanged;
-
-
+            PetObj.EmotionChanged += HandleEmotionChanged;
         }
 
         private void HandleEmotionChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("emotion changed event triggered");
+            ImageDisplayConverter Display = new ImageDisplayConverter();
+
+            Display.ConvertEnumToImage(PetObj.CurrentEmotion());
+
+            picBoxPetViewer.Image = Display.ConvertEnumToImage(PetObj.CurrentEmotion());
         }
 
         private void btnHappy_Click(object sender, EventArgs e)
         {
-            
-            TestPet.ChangeEmotion(EmotionEnum.Happy);
-            MessageBox.Show(TestPet.CurrentEmotion().ToString());
+            PetObj.ChangeEmotion(EmotionEnum.Happy);
         }
 
         private void btnSad_Click(object sender, EventArgs e)
         {
-            
-            TestPet.ChangeEmotion(EmotionEnum.Sad);
-            MessageBox.Show(TestPet.CurrentEmotion().ToString());
+            PetObj.ChangeEmotion(EmotionEnum.Sad);
         }
 
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            var value = RandomEnumValueHelper.RandomEnumValue<EmotionEnum>();
+            PetObj.ChangeEmotion(value);
+
+        }
     }
 }

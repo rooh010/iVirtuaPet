@@ -48,10 +48,10 @@
   <ItemGroup>
     <Compile Include="Hunger.cs" />
     <Compile Include="Emotion.cs" />
-    <Compile Include="EmotionEnum.cs" />
+    <Compile Include="Enums\EmotionEnum.cs" />
     <Compile Include="Interfaces\IEmotion.cs" />
     <Compile Include="Interfaces\IHunger.cs" />
-    <Compile Include="ImageDisplayConverter.cs" />
+    <Compile Include="Utility\ImageDisplayConverter.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="PetView.cs">
       <SubType>Form</SubType>
@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\RandomEnumValueHelper.cs" />
     <EmbeddedResource Include="PetView.resx">
       <DependentUpon>PetView.cs</DependentUpon>
     </EmbeddedResource>

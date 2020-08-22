@@ -7,14 +7,16 @@ using System.Windows.Forms;
 
 namespace iVirtuaPet
 {
-    public partial class Emotion : Hunger, IEmotion 
+    public partial class Emotion : Hunger, IEmotion
     {
         private EmotionEnum emotionSet;
 
         public EmotionEnum EmotionSet
         {
             get { return emotionSet; }
-            set { emotionSet = value;
+            set
+            {
+                emotionSet = value;
                 OnEmotionChanged();
             }
         }
@@ -37,7 +39,7 @@ namespace iVirtuaPet
         {
             EmotionSet = emotion;
 
-            return emotion;            
+            return emotion;
         }
 
 
@@ -55,5 +57,5 @@ namespace iVirtuaPet
     }
 
 
- }
+}
 
