@@ -17,13 +17,19 @@ namespace iVirtuaPet
             textBoxHungerLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
 
+            progressBarHunger.Value = PetObj.CurrentHungerLevel();
+
             textBoxHappyLevel.ReadOnly = true;
             textBoxHappyLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxHappyLevel.Text = PetObj.CurrentHappyLevel().ToString();
 
+            progressBarHappy.Value = PetObj.CurrentHappyLevel();
+
             textBoxSleepLevel.ReadOnly = true;
             textBoxSleepLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxSleepLevel.Text = PetObj.CurrentSleepLevel().ToString();
+
+            progressBarSleep.Value = PetObj.CurrentSleepLevel();
 
             PetObj.EmotionChanged += HandleEmotionChanged;
             PetObj.HungerChanged += HandleHungerChanged;
@@ -41,6 +47,7 @@ namespace iVirtuaPet
         private void HandleHungerChanged(object sender, EventArgs e)
         {
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
+            progressBarHunger.Value = PetObj.CurrentHungerLevel();
         }
 
         private void HandleLifeStateChanged(object sender, EventArgs e)
@@ -51,11 +58,13 @@ namespace iVirtuaPet
         private void HandleHappyChanged(object sender, EventArgs e)
         {
             textBoxHappyLevel.Text = PetObj.CurrentHappyLevel().ToString();
+            progressBarHappy.Value = PetObj.CurrentHappyLevel();
         }
 
         private void HandleSleepChanged(object sender, EventArgs e)
         {
             textBoxSleepLevel.Text = PetObj.CurrentSleepLevel().ToString();
+            progressBarSleep.Value = PetObj.CurrentSleepLevel();
         }
 
         private void btnHappy_Click(object sender, EventArgs e)

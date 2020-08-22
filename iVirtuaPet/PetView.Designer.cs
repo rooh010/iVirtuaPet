@@ -43,6 +43,9 @@
             this.SleepTimer = new System.Windows.Forms.Timer(this.components);
             this.HappyTimer = new System.Windows.Forms.Timer(this.components);
             this.HungerTimer = new System.Windows.Forms.Timer(this.components);
+            this.progressBarHunger = new System.Windows.Forms.ProgressBar();
+            this.progressBarHappy = new System.Windows.Forms.ProgressBar();
+            this.progressBarSleep = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,12 +163,42 @@
             this.HungerTimer.Interval = 20000;
             this.HungerTimer.Tick += new System.EventHandler(this.HungerTimer_Tick);
             // 
+            // progressBarHunger
+            // 
+            this.progressBarHunger.Location = new System.Drawing.Point(425, 55);
+            this.progressBarHunger.MarqueeAnimationSpeed = 50;
+            this.progressBarHunger.Name = "progressBarHunger";
+            this.progressBarHunger.Size = new System.Drawing.Size(137, 23);
+            this.progressBarHunger.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBarHunger.TabIndex = 10;
+            // 
+            // progressBarHappy
+            // 
+            this.progressBarHappy.Location = new System.Drawing.Point(425, 147);
+            this.progressBarHappy.MarqueeAnimationSpeed = 50;
+            this.progressBarHappy.Name = "progressBarHappy";
+            this.progressBarHappy.Size = new System.Drawing.Size(137, 23);
+            this.progressBarHappy.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBarHappy.TabIndex = 11;
+            // 
+            // progressBarSleep
+            // 
+            this.progressBarSleep.Location = new System.Drawing.Point(425, 245);
+            this.progressBarSleep.MarqueeAnimationSpeed = 50;
+            this.progressBarSleep.Name = "progressBarSleep";
+            this.progressBarSleep.Size = new System.Drawing.Size(137, 23);
+            this.progressBarSleep.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBarSleep.TabIndex = 12;
+            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(672, 603);
+            this.Controls.Add(this.progressBarSleep);
+            this.Controls.Add(this.progressBarHappy);
+            this.Controls.Add(this.progressBarHunger);
             this.Controls.Add(this.labelSleep);
             this.Controls.Add(this.textBoxSleepLevel);
             this.Controls.Add(this.labelHappy);
@@ -201,6 +234,9 @@
         private System.Windows.Forms.Timer SleepTimer;
         private System.Windows.Forms.Timer HappyTimer;
         private System.Windows.Forms.Timer HungerTimer;
+        private System.Windows.Forms.ProgressBar progressBarHunger;
+        private System.Windows.Forms.ProgressBar progressBarHappy;
+        private System.Windows.Forms.ProgressBar progressBarSleep;
     }
 }
 
