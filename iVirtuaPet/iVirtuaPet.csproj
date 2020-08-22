@@ -46,11 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\LifeStateEnum.cs" />
+    <Compile Include="Sleep.cs" />
     <Compile Include="Happy.cs" />
     <Compile Include="Hunger.cs" />
     <Compile Include="Emotion.cs" />
     <Compile Include="Enums\EmotionEnum.cs" />
     <Compile Include="Interfaces\IEmotion.cs" />
+    <Compile Include="Interfaces\ISleep.cs" />
     <Compile Include="Interfaces\IHappy.cs" />
     <Compile Include="Interfaces\IHunger.cs" />
     <Compile Include="Utility\ImageDisplayConverter.cs" />

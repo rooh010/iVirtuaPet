@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace iVirtuaPet.Enums
 {
-    public enum EmotionEnum
+    public enum LifeStateEnum
     {
-        Angry,
-        Asleep,
-        Happy,
-        Hungry,
-        Indifferent,
-        Sad,
-        Sleepy,
-        Unknown,
+        Egg,
+        Born,
+        Young,
+        Grown,
+        Alive,
         Dead
     }
 }

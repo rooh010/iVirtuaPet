@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iVirtuaPet.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace iVirtuaPet
 {
-    public partial class Happy : IHappy
+    public partial class Happy : Sleep, IHappy
     {
         private readonly int maxHappyLevel = 100;
 

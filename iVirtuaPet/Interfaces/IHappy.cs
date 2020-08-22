@@ -1,4 +1,4 @@
-﻿namespace iVirtuaPet
+﻿namespace iVirtuaPet.Interfaces
 {
     interface IHappy
     {

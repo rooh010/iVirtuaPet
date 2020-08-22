@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetView));
             this.btnHappy = new System.Windows.Forms.Button();
             this.btnSad = new System.Windows.Forms.Button();
-            this.picBoxPetViewer = new System.Windows.Forms.PictureBox();
             this.btnRandom = new System.Windows.Forms.Button();
             this.textBoxHungerLevel = new System.Windows.Forms.TextBox();
             this.labelHunger = new System.Windows.Forms.Label();
             this.labelHappy = new System.Windows.Forms.Label();
             this.textBoxHappyLevel = new System.Windows.Forms.TextBox();
+            this.picBoxPetViewer = new System.Windows.Forms.PictureBox();
+            this.labelSleep = new System.Windows.Forms.Label();
+            this.textBoxSleepLevel = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,18 +63,6 @@
             this.btnSad.Text = "Sad";
             this.btnSad.UseVisualStyleBackColor = false;
             this.btnSad.Click += new System.EventHandler(this.btnSad_Click);
-            // 
-            // picBoxPetViewer
-            // 
-            this.picBoxPetViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBoxPetViewer.ErrorImage = null;
-            this.picBoxPetViewer.Image = global::iVirtuaPet.Properties.Resources.happy;
-            this.picBoxPetViewer.InitialImage = null;
-            this.picBoxPetViewer.Location = new System.Drawing.Point(29, 12);
-            this.picBoxPetViewer.Name = "picBoxPetViewer";
-            this.picBoxPetViewer.Size = new System.Drawing.Size(375, 416);
-            this.picBoxPetViewer.TabIndex = 0;
-            this.picBoxPetViewer.TabStop = false;
             // 
             // btnRandom
             // 
@@ -119,12 +109,43 @@
             this.textBoxHappyLevel.TabIndex = 6;
             this.textBoxHappyLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // picBoxPetViewer
+            // 
+            this.picBoxPetViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxPetViewer.ErrorImage = null;
+            this.picBoxPetViewer.Image = global::iVirtuaPet.Properties.Resources.happy;
+            this.picBoxPetViewer.InitialImage = null;
+            this.picBoxPetViewer.Location = new System.Drawing.Point(29, 12);
+            this.picBoxPetViewer.Name = "picBoxPetViewer";
+            this.picBoxPetViewer.Size = new System.Drawing.Size(375, 416);
+            this.picBoxPetViewer.TabIndex = 0;
+            this.picBoxPetViewer.TabStop = false;
+            // 
+            // labelSleep
+            // 
+            this.labelSleep.AutoSize = true;
+            this.labelSleep.Location = new System.Drawing.Point(422, 164);
+            this.labelSleep.Name = "labelSleep";
+            this.labelSleep.Size = new System.Drawing.Size(34, 13);
+            this.labelSleep.TabIndex = 9;
+            this.labelSleep.Text = "Sleep";
+            // 
+            // textBoxSleepLevel
+            // 
+            this.textBoxSleepLevel.Location = new System.Drawing.Point(422, 189);
+            this.textBoxSleepLevel.Name = "textBoxSleepLevel";
+            this.textBoxSleepLevel.Size = new System.Drawing.Size(137, 20);
+            this.textBoxSleepLevel.TabIndex = 8;
+            this.textBoxSleepLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(672, 603);
+            this.Controls.Add(this.labelSleep);
+            this.Controls.Add(this.textBoxSleepLevel);
             this.Controls.Add(this.labelHappy);
             this.Controls.Add(this.textBoxHappyLevel);
             this.Controls.Add(this.labelHunger);
@@ -153,6 +174,8 @@
         private System.Windows.Forms.Label labelHunger;
         private System.Windows.Forms.Label labelHappy;
         private System.Windows.Forms.TextBox textBoxHappyLevel;
+        private System.Windows.Forms.Label labelSleep;
+        private System.Windows.Forms.TextBox textBoxSleepLevel;
     }
 }
 

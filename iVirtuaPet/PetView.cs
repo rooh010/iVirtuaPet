@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iVirtuaPet.Enums;
+using System;
 using System.Windows.Forms;
 
 namespace iVirtuaPet
@@ -20,9 +21,14 @@ namespace iVirtuaPet
             textBoxHappyLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxHappyLevel.Text = PetObj.CurrentHappyLevel().ToString();
 
+            textBoxSleepLevel.ReadOnly = true;
+            textBoxSleepLevel.BackColor = System.Drawing.SystemColors.Window;
+            textBoxSleepLevel.Text = PetObj.CurrentSleepLevel().ToString();
+
             PetObj.EmotionChanged += HandleEmotionChanged;
             PetObj.HungerChanged += HandleHungerChanged;
             PetObj.HappyChanged += HandleHappyChanged;
+            PetObj.SleepChanged += HandleSleepChanged;
         }
 
         private void HandleEmotionChanged(object sender, EventArgs e)
@@ -37,13 +43,16 @@ namespace iVirtuaPet
         private void HandleHungerChanged(object sender, EventArgs e)
         {
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
-
         }
 
         private void HandleHappyChanged(object sender, EventArgs e)
         {
             textBoxHappyLevel.Text = PetObj.CurrentHappyLevel().ToString();
+        }
 
+        private void HandleSleepChanged(object sender, EventArgs e)
+        {
+            textBoxSleepLevel.Text = PetObj.CurrentSleepLevel().ToString();
         }
 
         private void btnHappy_Click(object sender, EventArgs e)
@@ -60,7 +69,6 @@ namespace iVirtuaPet
         {
             var value = RandomEnumValueHelper.RandomEnumValue<EmotionEnum>();
             PetObj.ChangeEmotion(value);
-
         }
     }
 }
