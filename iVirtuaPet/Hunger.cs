@@ -9,9 +9,37 @@ namespace iVirtuaPet
 {
     public partial class Hunger : IHunger
     {
-        public void CurrentHungerLevel()
+        private readonly int maxHungerLevel = 100;
+
+        private readonly int minHungerLevel = 0;
+
+        private int hungerLevel;
+
+        public int HungerLevel
         {
-            MessageBox.Show("current hunger level here");
+            get { return hungerLevel; }
+            set
+            {
+                hungerLevel = value;
+                OnHungerChanged();
+            }
+        }
+
+        public event System.EventHandler HungerChanged;
+
+        protected virtual void OnHungerChanged()
+        {
+            if (HungerChanged != null) HungerChanged(this, EventArgs.Empty);
+        }
+        public int CurrentHungerLevel()
+        {
+            int getCurrentHunger = hungerLevel;
+            return getCurrentHunger;
+        }
+
+        public Hunger()
+        {
+            SetDefaultHungerLevel();
         }
 
         public void FeedPet()
@@ -21,7 +49,9 @@ namespace iVirtuaPet
 
         public void SetDefaultHungerLevel()
         {
-            throw new NotImplementedException();
+            int defaulthunger = maxHungerLevel;
+
+            hungerLevel = defaulthunger;
         }
     }
 }

@@ -18,7 +18,10 @@ namespace iVirtuaPet
         public PetView()
         {
             InitializeComponent();
+            textBoxHungerLevel.ReadOnly = true;
+            textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
             PetObj.EmotionChanged += HandleEmotionChanged;
+            PetObj.HungerChanged += HandleHungerChanged;
         }
 
         private void HandleEmotionChanged(object sender, EventArgs e)
@@ -28,6 +31,12 @@ namespace iVirtuaPet
             Display.ConvertEnumToImage(PetObj.CurrentEmotion());
 
             picBoxPetViewer.Image = Display.ConvertEnumToImage(PetObj.CurrentEmotion());
+        }
+
+        private void HandleHungerChanged(object sender, EventArgs e)
+        {
+            textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
+
         }
 
         private void btnHappy_Click(object sender, EventArgs e)

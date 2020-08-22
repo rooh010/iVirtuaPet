@@ -10,7 +10,7 @@ namespace iVirtuaPet
     {
         void SetDefaultHungerLevel();
 
-        void CurrentHungerLevel();
+        int CurrentHungerLevel();
 
         void FeedPet();
 
