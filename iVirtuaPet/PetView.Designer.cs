@@ -35,9 +35,11 @@
             // 
             // picBoxPetViewer
             // 
-            this.picBoxPetViewer.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBoxPetViewer.ErrorImage")));
-            this.picBoxPetViewer.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBoxPetViewer.InitialImage")));
-            this.picBoxPetViewer.Location = new System.Drawing.Point(155, 12);
+            this.picBoxPetViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picBoxPetViewer.ErrorImage = null;
+            this.picBoxPetViewer.Image = global::iVirtuaPet.Properties.Resources.happy;
+            this.picBoxPetViewer.InitialImage = null;
+            this.picBoxPetViewer.Location = new System.Drawing.Point(151, 39);
             this.picBoxPetViewer.Name = "picBoxPetViewer";
             this.picBoxPetViewer.Size = new System.Drawing.Size(375, 416);
             this.picBoxPetViewer.TabIndex = 0;
