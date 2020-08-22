@@ -19,6 +19,7 @@ namespace iVirtuaPet
         {
             InitializeComponent();
             textBoxHungerLevel.ReadOnly = true;
+            textBoxHungerLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
             PetObj.EmotionChanged += HandleEmotionChanged;
             PetObj.HungerChanged += HandleHungerChanged;
