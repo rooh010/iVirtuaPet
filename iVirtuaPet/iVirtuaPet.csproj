@@ -51,6 +51,7 @@
     <Compile Include="EmotionEnum.cs" />
     <Compile Include="IEmotion.cs" />
     <Compile Include="IHunger.cs" />
+    <Compile Include="ImageDisplayConverter.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="PetView.cs">
       <SubType>Form</SubType>

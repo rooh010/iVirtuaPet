@@ -15,6 +15,8 @@ namespace iVirtuaPet
         public PetView()
         {
             InitializeComponent();
+            Pet TestPet = new Pet();
+            
         }
     }
 }

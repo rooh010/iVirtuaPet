@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace iVirtuaPet
 {
     class Pet
     {
-        public EmotionEnum CurrentEmotion;
-
         public Pet()
         {
-            CurrentEmotion = EmotionEnum.Happy;
+            Emotion EmotionalState = new Emotion();
+            MessageBox.Show(EmotionalState.EmotionSet.ToString());
+
+
+
         }
     }
 }

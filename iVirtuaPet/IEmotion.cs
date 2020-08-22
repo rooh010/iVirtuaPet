@@ -8,11 +8,12 @@ namespace iVirtuaPet
 {
     interface IEmotion
     {
-        void SetDefaultEmotion();
 
-        void CurrentEmotion();
+        EmotionEnum SetDefaultEmotion();
 
-        void ChangeEmotion();
+        EmotionEnum CurrentEmotion(EmotionEnum emotionSet);
+
+        EmotionEnum ChangeEmotion(EmotionEnum emotionSet);
 
     }
 }
