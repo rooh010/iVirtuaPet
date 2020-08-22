@@ -46,7 +46,7 @@ namespace iVirtuaPet
 
         public void SleepTick()
         {
-            throw new NotImplementedException();
+            SleepLevel = SleepLevel - 1;
         }
 
         public Sleep()

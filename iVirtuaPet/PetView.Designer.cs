@@ -81,7 +81,7 @@
             // 
             // textBoxHungerLevel
             // 
-            this.textBoxHungerLevel.Location = new System.Drawing.Point(425, 37);
+            this.textBoxHungerLevel.Location = new System.Drawing.Point(425, 28);
             this.textBoxHungerLevel.Name = "textBoxHungerLevel";
             this.textBoxHungerLevel.Size = new System.Drawing.Size(137, 20);
             this.textBoxHungerLevel.TabIndex = 4;
@@ -99,7 +99,7 @@
             // labelHappy
             // 
             this.labelHappy.AutoSize = true;
-            this.labelHappy.Location = new System.Drawing.Point(425, 85);
+            this.labelHappy.Location = new System.Drawing.Point(425, 105);
             this.labelHappy.Name = "labelHappy";
             this.labelHappy.Size = new System.Drawing.Size(57, 13);
             this.labelHappy.TabIndex = 7;
@@ -107,7 +107,7 @@
             // 
             // textBoxHappyLevel
             // 
-            this.textBoxHappyLevel.Location = new System.Drawing.Point(425, 110);
+            this.textBoxHappyLevel.Location = new System.Drawing.Point(425, 121);
             this.textBoxHappyLevel.Name = "textBoxHappyLevel";
             this.textBoxHappyLevel.Size = new System.Drawing.Size(137, 20);
             this.textBoxHappyLevel.TabIndex = 6;
@@ -128,7 +128,7 @@
             // labelSleep
             // 
             this.labelSleep.AutoSize = true;
-            this.labelSleep.Location = new System.Drawing.Point(422, 164);
+            this.labelSleep.Location = new System.Drawing.Point(425, 203);
             this.labelSleep.Name = "labelSleep";
             this.labelSleep.Size = new System.Drawing.Size(34, 13);
             this.labelSleep.TabIndex = 9;
@@ -136,7 +136,7 @@
             // 
             // textBoxSleepLevel
             // 
-            this.textBoxSleepLevel.Location = new System.Drawing.Point(422, 189);
+            this.textBoxSleepLevel.Location = new System.Drawing.Point(425, 219);
             this.textBoxSleepLevel.Name = "textBoxSleepLevel";
             this.textBoxSleepLevel.Size = new System.Drawing.Size(137, 20);
             this.textBoxSleepLevel.TabIndex = 8;
@@ -144,14 +144,20 @@
             // 
             // SleepTimer
             // 
+            this.SleepTimer.Enabled = true;
+            this.SleepTimer.Interval = 30000;
             this.SleepTimer.Tick += new System.EventHandler(this.SleepTimer_Tick);
             // 
             // HappyTimer
             // 
+            this.HappyTimer.Enabled = true;
+            this.HappyTimer.Interval = 10000;
             this.HappyTimer.Tick += new System.EventHandler(this.HappyTimer_Tick);
             // 
             // HungerTimer
             // 
+            this.HungerTimer.Enabled = true;
+            this.HungerTimer.Interval = 20000;
             this.HungerTimer.Tick += new System.EventHandler(this.HungerTimer_Tick);
             // 
             // PetView

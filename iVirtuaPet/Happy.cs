@@ -46,7 +46,7 @@ namespace iVirtuaPet
 
         public void HappyTick()
         {
-            throw new NotImplementedException();
+            HappyLevel = HappyLevel - 1;
         }
 
         public Happy()
