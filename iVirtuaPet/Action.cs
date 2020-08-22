@@ -47,7 +47,7 @@ namespace iVirtuaPet
 
         public void ActionTick()
         {
-            if (ActionLevel > 10000 && ActionLevel < 0 )
+            if (ActionLevel < maxActionLevel-1 && ActionLevel > minActionLevel )
             ActionLevel = ActionLevel + 100;
             
         }
