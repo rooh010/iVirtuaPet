@@ -35,6 +35,8 @@
             this.btnRandom = new System.Windows.Forms.Button();
             this.textBoxHungerLevel = new System.Windows.Forms.TextBox();
             this.labelHunger = new System.Windows.Forms.Label();
+            this.labelHappy = new System.Windows.Forms.Label();
+            this.textBoxHappyLevel = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,12 +102,31 @@
             this.labelHunger.TabIndex = 5;
             this.labelHunger.Text = "Hunger";
             // 
+            // labelHappy
+            // 
+            this.labelHappy.AutoSize = true;
+            this.labelHappy.Location = new System.Drawing.Point(425, 85);
+            this.labelHappy.Name = "labelHappy";
+            this.labelHappy.Size = new System.Drawing.Size(57, 13);
+            this.labelHappy.TabIndex = 7;
+            this.labelHappy.Text = "Happiness";
+            // 
+            // textBoxHappyLevel
+            // 
+            this.textBoxHappyLevel.Location = new System.Drawing.Point(425, 110);
+            this.textBoxHappyLevel.Name = "textBoxHappyLevel";
+            this.textBoxHappyLevel.Size = new System.Drawing.Size(137, 20);
+            this.textBoxHappyLevel.TabIndex = 6;
+            this.textBoxHappyLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(672, 603);
+            this.Controls.Add(this.labelHappy);
+            this.Controls.Add(this.textBoxHappyLevel);
             this.Controls.Add(this.labelHunger);
             this.Controls.Add(this.textBoxHungerLevel);
             this.Controls.Add(this.btnRandom);
@@ -130,6 +151,8 @@
         private System.Windows.Forms.Button btnRandom;
         private System.Windows.Forms.TextBox textBoxHungerLevel;
         private System.Windows.Forms.Label labelHunger;
+        private System.Windows.Forms.Label labelHappy;
+        private System.Windows.Forms.TextBox textBoxHappyLevel;
     }
 }
 

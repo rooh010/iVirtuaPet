@@ -15,6 +15,7 @@ namespace iVirtuaPet
         Indifferent,
         Sad,
         Sleepy,
-        Unknown
+        Unknown,
+        Dead
     }
 }

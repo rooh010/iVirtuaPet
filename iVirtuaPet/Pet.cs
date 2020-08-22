@@ -13,6 +13,7 @@ namespace iVirtuaPet
         {
             _ = new Emotion();
             _ = new Hunger();
+            _ = new Happy();
 
         }
 

@@ -11,11 +11,18 @@ namespace iVirtuaPet
         public PetView()
         {
             InitializeComponent();
+
             textBoxHungerLevel.ReadOnly = true;
             textBoxHungerLevel.BackColor = System.Drawing.SystemColors.Window;
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
+
+            textBoxHappyLevel.ReadOnly = true;
+            textBoxHappyLevel.BackColor = System.Drawing.SystemColors.Window;
+            textBoxHappyLevel.Text = PetObj.CurrentHappyLevel().ToString();
+
             PetObj.EmotionChanged += HandleEmotionChanged;
             PetObj.HungerChanged += HandleHungerChanged;
+            PetObj.HappyChanged += HandleHappyChanged;
         }
 
         private void HandleEmotionChanged(object sender, EventArgs e)
@@ -30,6 +37,12 @@ namespace iVirtuaPet
         private void HandleHungerChanged(object sender, EventArgs e)
         {
             textBoxHungerLevel.Text = PetObj.CurrentHungerLevel().ToString();
+
+        }
+
+        private void HandleHappyChanged(object sender, EventArgs e)
+        {
+            textBoxHappyLevel.Text = PetObj.CurrentHappyLevel().ToString();
 
         }
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Happy.cs" />
     <Compile Include="Hunger.cs" />
     <Compile Include="Emotion.cs" />
     <Compile Include="Enums\EmotionEnum.cs" />
@@ -90,6 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\StockImages\dead.png" />
     <Content Include="Assets\iVirtuaPet.ico" />
     <Content Include="Assets\iVirtuaPetv2.ico" />
     <Content Include="Assets\StockImages\angry.png" />

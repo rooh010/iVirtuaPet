@@ -37,6 +37,8 @@ namespace iVirtuaPet
                     return global::iVirtuaPet.Properties.Resources.unknown;
                 case EmotionEnum.Indifferent:
                     return global::iVirtuaPet.Properties.Resources.indifferent;
+                case EmotionEnum.Dead:
+                    return global::iVirtuaPet.Properties.Resources.dead;
                 default:
                     return global::iVirtuaPet.Properties.Resources.unknown;
             }

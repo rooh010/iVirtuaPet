@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace iVirtuaPet
 {
-    public partial class Hunger : IHunger
+    public partial class Hunger : Happy, IHunger
     {
         private readonly int maxHungerLevel = 100;
 
