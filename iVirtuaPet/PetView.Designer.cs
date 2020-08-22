@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 603);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "PetView";
+            this.Text = "iVirtuaPet";
             this.ResumeLayout(false);
 
         }
