@@ -8,5 +8,7 @@
 
         void FeedPet();
 
+        void HungerTick();
+
     }
 }

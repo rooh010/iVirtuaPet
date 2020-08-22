@@ -44,6 +44,11 @@ namespace iVirtuaPet
             happyLevel = defaulthappy;
         }
 
+        public void HappyTick()
+        {
+            throw new NotImplementedException();
+        }
+
         public Happy()
         {
             SetDefaultHappyLevel();

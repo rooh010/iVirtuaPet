@@ -44,6 +44,11 @@ namespace iVirtuaPet
             sleepLevel = defaultsleep;
         }
 
+        public void SleepTick()
+        {
+            throw new NotImplementedException();
+        }
+
         public Sleep()
         {
             SetDefaultSleepLevel();

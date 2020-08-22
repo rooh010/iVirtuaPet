@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\LifeStateEnum.cs" />
+    <Compile Include="Interfaces\ITimerTick.cs" />
     <Compile Include="Sleep.cs" />
     <Compile Include="Happy.cs" />
     <Compile Include="Hunger.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\RandomEnumValueHelper.cs" />
+    <Compile Include="Utility\TimerTick.cs" />
     <EmbeddedResource Include="PetView.resx">
       <DependentUpon>PetView.cs</DependentUpon>
     </EmbeddedResource>

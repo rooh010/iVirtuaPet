@@ -54,5 +54,10 @@ namespace iVirtuaPet
 
             hungerLevel = defaulthunger;
         }
+
+        public void HungerTick()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

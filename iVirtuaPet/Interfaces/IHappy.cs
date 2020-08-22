@@ -6,5 +6,7 @@
 
         int CurrentHappyLevel();
 
+        void HappyTick();
+
     }
 }
