@@ -11,6 +11,15 @@ namespace iVirtuaPet
     {
         private EmotionEnum emotionSet;
 
+        public EmotionEnum EmotionSet
+        {
+            get { return emotionSet; }
+            set { emotionSet = value;
+                OnEmotionChanged();
+            }
+        }
+
+
         public event System.EventHandler EmotionChanged;
 
         protected virtual void OnEmotionChanged()
@@ -20,15 +29,13 @@ namespace iVirtuaPet
 
         public Emotion()
         {
-            emotionSet = SetDefaultEmotion();
+            EmotionSet = SetDefaultEmotion();
 
         }
 
         public EmotionEnum ChangeEmotion(EmotionEnum emotion)
         {
-            emotionSet = emotion;
-
-            OnEmotionChanged();
+            EmotionSet = emotion;
 
             return emotion;            
         }
@@ -36,7 +43,7 @@ namespace iVirtuaPet
 
         public EmotionEnum CurrentEmotion()
         {
-            EmotionEnum currentEnum = emotionSet;
+            EmotionEnum currentEnum = EmotionSet;
             return currentEnum;
         }
 
