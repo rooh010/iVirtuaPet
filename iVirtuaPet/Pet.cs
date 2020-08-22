@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace iVirtuaPet
 {
-    public enum Emotions
+    class Pet
     {
-        Angry,
-        Asleep,
-        Happy,
-        Hungry,
-        Indifferent,
-        Sad,
-        Sleepy
+        public EmotionEnum CurrentEmotion;
+
+        public Pet()
+        {
+            CurrentEmotion = EmotionEnum.Happy;
+        }
     }
 }

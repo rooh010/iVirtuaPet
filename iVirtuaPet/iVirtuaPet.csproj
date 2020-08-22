@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Emotions.cs" />
+    <Compile Include="Hunger.cs" />
+    <Compile Include="Emotion.cs" />
+    <Compile Include="EmotionEnum.cs" />
+    <Compile Include="IEmotion.cs" />
+    <Compile Include="IHunger.cs" />
+    <Compile Include="Pet.cs" />
     <Compile Include="PetView.cs">
       <SubType>Form</SubType>
     </Compile>
