@@ -73,5 +73,20 @@ namespace iVirtuaPet
             var value = RandomEnumValueHelper.RandomEnumValue<EmotionEnum>();
             PetObj.ChangeEmotion(value);
         }
+
+        private void SleepTimer_Tick(object sender, EventArgs e)
+        {
+            PetObj.SleepTick();
+        }
+
+        private void HappyTimer_Tick(object sender, EventArgs e)
+        {
+            PetObj.HappyTick();
+        }
+
+        private void HungerTimer_Tick(object sender, EventArgs e)
+        {
+            PetObj.HungerTick();
+        }
     }
 }

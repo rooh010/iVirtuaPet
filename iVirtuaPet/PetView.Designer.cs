@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetView));
             this.btnHappy = new System.Windows.Forms.Button();
             this.btnSad = new System.Windows.Forms.Button();
@@ -39,6 +40,9 @@
             this.picBoxPetViewer = new System.Windows.Forms.PictureBox();
             this.labelSleep = new System.Windows.Forms.Label();
             this.textBoxSleepLevel = new System.Windows.Forms.TextBox();
+            this.SleepTimer = new System.Windows.Forms.Timer(this.components);
+            this.HappyTimer = new System.Windows.Forms.Timer(this.components);
+            this.HungerTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +142,18 @@
             this.textBoxSleepLevel.TabIndex = 8;
             this.textBoxSleepLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // SleepTimer
+            // 
+            this.SleepTimer.Tick += new System.EventHandler(this.SleepTimer_Tick);
+            // 
+            // HappyTimer
+            // 
+            this.HappyTimer.Tick += new System.EventHandler(this.HappyTimer_Tick);
+            // 
+            // HungerTimer
+            // 
+            this.HungerTimer.Tick += new System.EventHandler(this.HungerTimer_Tick);
+            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +192,9 @@
         private System.Windows.Forms.TextBox textBoxHappyLevel;
         private System.Windows.Forms.Label labelSleep;
         private System.Windows.Forms.TextBox textBoxSleepLevel;
+        private System.Windows.Forms.Timer SleepTimer;
+        private System.Windows.Forms.Timer HappyTimer;
+        private System.Windows.Forms.Timer HungerTimer;
     }
 }
 
