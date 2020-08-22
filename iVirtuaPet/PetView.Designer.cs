@@ -46,6 +46,8 @@
             this.progressBarHunger = new System.Windows.Forms.ProgressBar();
             this.progressBarHappy = new System.Windows.Forms.ProgressBar();
             this.progressBarSleep = new System.Windows.Forms.ProgressBar();
+            this.progressBarAction = new System.Windows.Forms.ProgressBar();
+            this.ActionTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -190,12 +192,28 @@
             this.progressBarSleep.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBarSleep.TabIndex = 12;
             // 
+            // progressBarAction
+            // 
+            this.progressBarAction.Location = new System.Drawing.Point(29, 571);
+            this.progressBarAction.MarqueeAnimationSpeed = 50;
+            this.progressBarAction.Maximum = 10000;
+            this.progressBarAction.Name = "progressBarAction";
+            this.progressBarAction.Size = new System.Drawing.Size(533, 23);
+            this.progressBarAction.TabIndex = 13;
+            // 
+            // ActionTimer
+            // 
+            this.ActionTimer.Enabled = true;
+            this.ActionTimer.Interval = 1000;
+            this.ActionTimer.Tick += new System.EventHandler(this.ActionTimer_Tick);
+            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(672, 603);
+            this.ClientSize = new System.Drawing.Size(586, 603);
+            this.Controls.Add(this.progressBarAction);
             this.Controls.Add(this.progressBarSleep);
             this.Controls.Add(this.progressBarHappy);
             this.Controls.Add(this.progressBarHunger);
@@ -237,6 +255,8 @@
         private System.Windows.Forms.ProgressBar progressBarHunger;
         private System.Windows.Forms.ProgressBar progressBarHappy;
         private System.Windows.Forms.ProgressBar progressBarSleep;
+        private System.Windows.Forms.ProgressBar progressBarAction;
+        private System.Windows.Forms.Timer ActionTimer;
     }
 }
 

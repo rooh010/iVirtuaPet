@@ -46,7 +46,8 @@ namespace iVirtuaPet
 
         public void HappyTick()
         {
-            HappyLevel = HappyLevel - 1;
+            if (HappyLevel > 100 && HappyLevel < 0)
+                HappyLevel = HappyLevel - 1;
         }
 
         public Happy()

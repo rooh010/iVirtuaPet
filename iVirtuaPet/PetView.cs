@@ -31,11 +31,14 @@ namespace iVirtuaPet
 
             progressBarSleep.Value = PetObj.CurrentSleepLevel();
 
+            progressBarAction.Value = PetObj.CurrentActionLevel();
+
             PetObj.EmotionChanged += HandleEmotionChanged;
             PetObj.HungerChanged += HandleHungerChanged;
             PetObj.HappyChanged += HandleHappyChanged;
             PetObj.SleepChanged += HandleSleepChanged;
             PetObj.LifeStateChanged += HandleLifeStateChanged;
+            PetObj.ActionChanged += HandleActionChanged;
         }
 
         private void HandleEmotionChanged(object sender, EventArgs e)
@@ -67,14 +70,27 @@ namespace iVirtuaPet
             progressBarSleep.Value = PetObj.CurrentSleepLevel();
         }
 
+        private void HandleActionChanged(object sender, EventArgs e)
+        {
+            progressBarAction.Value = PetObj.CurrentActionLevel();
+        }
+
         private void btnHappy_Click(object sender, EventArgs e)
         {
             PetObj.ChangeEmotion(EmotionEnum.Happy);
+
+            //test action
+            if (PetObj.CurrentActionLevel() > 500)
+            PetObj.UseAction(500);
         }
 
         private void btnSad_Click(object sender, EventArgs e)
         {
             PetObj.ChangeEmotion(EmotionEnum.Sad);
+
+            // test action
+            if (PetObj.CurrentActionLevel() > 1000)
+                PetObj.UseAction(1000);
         }
 
         private void btnRandom_Click(object sender, EventArgs e)
@@ -96,6 +112,11 @@ namespace iVirtuaPet
         private void HungerTimer_Tick(object sender, EventArgs e)
         {
             PetObj.HungerTick();
+        }
+
+        private void ActionTimer_Tick(object sender, EventArgs e)
+        {
+            PetObj.ActionTick();
         }
     }
 }

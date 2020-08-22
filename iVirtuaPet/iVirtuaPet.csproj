@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\LifeStateEnum.cs" />
+    <Compile Include="Interfaces\IAction.cs" />
+    <Compile Include="Action.cs" />
     <Compile Include="Sleep.cs" />
     <Compile Include="Happy.cs" />
     <Compile Include="Hunger.cs" />

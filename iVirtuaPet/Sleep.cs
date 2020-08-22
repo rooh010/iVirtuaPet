@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace iVirtuaPet
 {
-    public partial class Sleep : ISleep
+    public partial class Sleep : Action, ISleep
     {
         private readonly int maxSleepLevel = 100;
 
@@ -46,7 +46,8 @@ namespace iVirtuaPet
 
         public void SleepTick()
         {
-            SleepLevel = SleepLevel - 1;
+            if (SleepLevel > 100 && SleepLevel < 0)
+                SleepLevel = SleepLevel - 1;
         }
 
         public Sleep()
