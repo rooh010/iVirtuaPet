@@ -50,6 +50,7 @@
     <Compile Include="Emotion.cs" />
     <Compile Include="Enums\EmotionEnum.cs" />
     <Compile Include="Interfaces\IEmotion.cs" />
+    <Compile Include="Interfaces\IHappy.cs" />
     <Compile Include="Interfaces\IHunger.cs" />
     <Compile Include="Utility\ImageDisplayConverter.cs" />
     <Compile Include="Pet.cs" />
