@@ -7,16 +7,18 @@ using System.Windows.Forms;
 
 namespace iVirtuaPet
 {
-    class Pet
+    class Pet : Emotion
     {
         public Pet()
         {
             Emotion EmotionalState = new Emotion();
-            MessageBox.Show(EmotionalState.CurrentEmotion().ToString());
 
-            EmotionalState.ChangeEmotion(EmotionEnum.Sad);
-            MessageBox.Show(EmotionalState.CurrentEmotion().ToString());
+            //MessageBox.Show(EmotionalState.CurrentEmotion().ToString());
+
+            //EmotionalState.ChangeEmotion(EmotionEnum.Sad);
+            //MessageBox.Show(EmotionalState.CurrentEmotion().ToString());
 
         }
+
     }
 }

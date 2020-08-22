@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace iVirtuaPet
 {
-    class Hunger : IHunger
+    public partial class Hunger : IHunger
     {
         public void CurrentHungerLevel()
         {
-            throw new NotImplementedException();
+            MessageBox.Show("current hunger level here");
         }
 
         public void FeedPet()

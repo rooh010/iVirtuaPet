@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace iVirtuaPet
 {
-    public class Emotion : IEmotion
+    public partial class Emotion : Hunger, IEmotion 
     {
         private EmotionEnum emotionSet;
 
-        //public event System.EventHandler EmotionChanged;
+        public event System.EventHandler EmotionChanged;
 
-        //protected virtual void OnEmotionChanged()
-        //{
-        //    if (EmotionChanged != null) EmotionChanged(this, EventArgs.Empty);
-        //}
+        protected virtual void OnEmotionChanged()
+        {
+            if (EmotionChanged != null) EmotionChanged(this, EventArgs.Empty);
+        }
 
         public Emotion()
         {
@@ -26,6 +27,9 @@ namespace iVirtuaPet
         public EmotionEnum ChangeEmotion(EmotionEnum emotion)
         {
             emotionSet = emotion;
+
+            OnEmotionChanged();
+
             return emotion;            
         }
 
