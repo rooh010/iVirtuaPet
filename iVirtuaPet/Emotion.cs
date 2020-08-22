@@ -8,26 +8,32 @@ namespace iVirtuaPet
 {
     public class Emotion : IEmotion
     {
-        public EmotionEnum EmotionSet;
+        private EmotionEnum emotionSet;
+
+        //public event System.EventHandler EmotionChanged;
+
+        //protected virtual void OnEmotionChanged()
+        //{
+        //    if (EmotionChanged != null) EmotionChanged(this, EventArgs.Empty);
+        //}
 
         public Emotion()
         {
-            EmotionSet = SetDefaultEmotion();
+            emotionSet = SetDefaultEmotion();
 
         }
 
-
-
-        public EmotionEnum ChangeEmotion(EmotionEnum emotionSet)
+        public EmotionEnum ChangeEmotion(EmotionEnum emotion)
         {
-            throw new NotImplementedException();
+            emotionSet = emotion;
+            return emotion;            
         }
 
- 
 
-        public EmotionEnum CurrentEmotion(EmotionEnum emotionSet)
+        public EmotionEnum CurrentEmotion()
         {
-            throw new NotImplementedException();
+            EmotionEnum currentEnum = emotionSet;
+            return currentEnum;
         }
 
         public EmotionEnum SetDefaultEmotion()

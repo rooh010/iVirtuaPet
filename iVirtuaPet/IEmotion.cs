@@ -11,7 +11,7 @@ namespace iVirtuaPet
 
         EmotionEnum SetDefaultEmotion();
 
-        EmotionEnum CurrentEmotion(EmotionEnum emotionSet);
+        EmotionEnum CurrentEmotion();
 
         EmotionEnum ChangeEmotion(EmotionEnum emotionSet);
 

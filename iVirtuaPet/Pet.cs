@@ -12,9 +12,10 @@ namespace iVirtuaPet
         public Pet()
         {
             Emotion EmotionalState = new Emotion();
-            MessageBox.Show(EmotionalState.EmotionSet.ToString());
+            MessageBox.Show(EmotionalState.CurrentEmotion().ToString());
 
-
+            EmotionalState.ChangeEmotion(EmotionEnum.Sad);
+            MessageBox.Show(EmotionalState.CurrentEmotion().ToString());
 
         }
     }
