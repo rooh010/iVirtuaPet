@@ -13,11 +13,19 @@ namespace iVirtuaPet
     public partial class PetView : Form
     {
         Pet TestPet = new Pet();
+        
 
         public PetView()
         {
             InitializeComponent();
-      
+            TestPet.EmotionChanged += HandleEmotionChanged;
+
+
+        }
+
+        private void HandleEmotionChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("emotion changed event triggered");
         }
 
         private void btnHappy_Click(object sender, EventArgs e)
@@ -33,7 +41,6 @@ namespace iVirtuaPet
             TestPet.ChangeEmotion(EmotionEnum.Sad);
             MessageBox.Show(TestPet.CurrentEmotion().ToString());
         }
-
 
     }
 }
