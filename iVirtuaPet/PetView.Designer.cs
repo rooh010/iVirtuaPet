@@ -28,20 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetView));
+            this.picBoxPetViewer = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
+            // 
+            // picBoxPetViewer
+            // 
+            this.picBoxPetViewer.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBoxPetViewer.ErrorImage")));
+            this.picBoxPetViewer.InitialImage = ((System.Drawing.Image)(resources.GetObject("picBoxPetViewer.InitialImage")));
+            this.picBoxPetViewer.Location = new System.Drawing.Point(155, 12);
+            this.picBoxPetViewer.Name = "picBoxPetViewer";
+            this.picBoxPetViewer.Size = new System.Drawing.Size(375, 416);
+            this.picBoxPetViewer.TabIndex = 0;
+            this.picBoxPetViewer.TabStop = false;
             // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(672, 603);
+            this.Controls.Add(this.picBoxPetViewer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PetView";
             this.Text = "iVirtuaPet";
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox picBoxPetViewer;
     }
 }
 

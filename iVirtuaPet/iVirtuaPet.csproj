@@ -79,5 +79,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\iVirtuaPet.ico" />
+    <Content Include="Assets\iVirtuaPetv2.ico" />
+    <Content Include="Assets\StockImages\angry.png" />
+    <Content Include="Assets\StockImages\asleep.png" />
+    <Content Include="Assets\StockImages\blank.png" />
+    <Content Include="Assets\StockImages\happy.png" />
+    <Content Include="Assets\StockImages\hungry.png" />
+    <Content Include="Assets\StockImages\indifferent.png" />
+    <Content Include="Assets\StockImages\sad.png" />
+    <Content Include="Assets\StockImages\sleepy.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
