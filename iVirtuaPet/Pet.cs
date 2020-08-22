@@ -11,8 +11,8 @@ namespace iVirtuaPet
     {
         public Pet()
         {
-            Emotion EmotionalState = new Emotion();
-            Hunger HungerState = new Hunger();
+            _ = new Emotion();
+            _ = new Hunger();
 
         }
 
