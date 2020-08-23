@@ -6,12 +6,13 @@ namespace iVirtuaPet
 {
     public partial class PetView : Form
     {
-        Pet PetObj = new Pet();
-
+        Pet PetObj = new Pet("Test Pet");
 
         public PetView()
         {
             InitializeComponent();
+
+            labelPetName.Text = PetObj.Name;
 
             textBoxHungerLevel.ReadOnly = true;
             textBoxHungerLevel.BackColor = System.Drawing.SystemColors.Window;

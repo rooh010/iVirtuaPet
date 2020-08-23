@@ -48,6 +48,7 @@
             this.progressBarSleep = new System.Windows.Forms.ProgressBar();
             this.progressBarAction = new System.Windows.Forms.ProgressBar();
             this.ActionTimer = new System.Windows.Forms.Timer(this.components);
+            this.labelPetName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,12 +208,22 @@
             this.ActionTimer.Interval = 1000;
             this.ActionTimer.Tick += new System.EventHandler(this.ActionTimer_Tick);
             // 
+            // labelPetName
+            // 
+            this.labelPetName.AutoSize = true;
+            this.labelPetName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPetName.Location = new System.Drawing.Point(424, 520);
+            this.labelPetName.Name = "labelPetName";
+            this.labelPetName.Size = new System.Drawing.Size(0, 23);
+            this.labelPetName.TabIndex = 14;
+            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(586, 603);
+            this.Controls.Add(this.labelPetName);
             this.Controls.Add(this.progressBarAction);
             this.Controls.Add(this.progressBarSleep);
             this.Controls.Add(this.progressBarHappy);
@@ -257,6 +268,7 @@
         private System.Windows.Forms.ProgressBar progressBarSleep;
         private System.Windows.Forms.ProgressBar progressBarAction;
         private System.Windows.Forms.Timer ActionTimer;
+        private System.Windows.Forms.Label labelPetName;
     }
 }
 

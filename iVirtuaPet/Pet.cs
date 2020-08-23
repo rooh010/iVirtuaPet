@@ -10,6 +10,17 @@ namespace iVirtuaPet
 {
     class Pet : Emotion
     {
+
+        private string name;
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+
+
         private LifeStateEnum lifeState;
         public LifeStateEnum LifeState
         {
@@ -29,9 +40,10 @@ namespace iVirtuaPet
             if (LifeStateChanged != null) LifeStateChanged(this, EventArgs.Empty);
         }
 
-        public Pet()
+        public Pet(string petname)
         {
             LifeState = LifeStateEnum.Alive;
+            name = petname;
 
             _ = new Emotion();
             _ = new Hunger();
