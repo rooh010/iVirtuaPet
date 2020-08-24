@@ -49,15 +49,20 @@
             this.progressBarAction = new System.Windows.Forms.ProgressBar();
             this.ActionTimer = new System.Windows.Forms.Timer(this.components);
             this.labelPetName = new System.Windows.Forms.Label();
+            this.buttonFood = new System.Windows.Forms.Button();
+            this.buttonBed = new System.Windows.Forms.Button();
+            this.buttonHug = new System.Windows.Forms.Button();
+            this.labelActionPoints = new System.Windows.Forms.Label();
+            this.labelPetNameTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPetViewer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHappy
             // 
             this.btnHappy.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHappy.Location = new System.Drawing.Point(29, 434);
+            this.btnHappy.Location = new System.Drawing.Point(428, 339);
             this.btnHappy.Name = "btnHappy";
-            this.btnHappy.Size = new System.Drawing.Size(125, 59);
+            this.btnHappy.Size = new System.Drawing.Size(84, 30);
             this.btnHappy.TabIndex = 1;
             this.btnHappy.Text = "Happy";
             this.btnHappy.UseVisualStyleBackColor = false;
@@ -66,9 +71,9 @@
             // btnSad
             // 
             this.btnSad.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSad.Location = new System.Drawing.Point(29, 505);
+            this.btnSad.Location = new System.Drawing.Point(428, 375);
             this.btnSad.Name = "btnSad";
-            this.btnSad.Size = new System.Drawing.Size(125, 59);
+            this.btnSad.Size = new System.Drawing.Size(84, 27);
             this.btnSad.TabIndex = 2;
             this.btnSad.Text = "Sad";
             this.btnSad.UseVisualStyleBackColor = false;
@@ -77,9 +82,9 @@
             // btnRandom
             // 
             this.btnRandom.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRandom.Location = new System.Drawing.Point(160, 434);
+            this.btnRandom.Location = new System.Drawing.Point(428, 300);
             this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(125, 59);
+            this.btnRandom.Size = new System.Drawing.Size(84, 33);
             this.btnRandom.TabIndex = 3;
             this.btnRandom.Text = "Random";
             this.btnRandom.UseVisualStyleBackColor = false;
@@ -212,10 +217,61 @@
             // 
             this.labelPetName.AutoSize = true;
             this.labelPetName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPetName.Location = new System.Drawing.Point(424, 520);
+            this.labelPetName.Location = new System.Drawing.Point(421, 541);
             this.labelPetName.Name = "labelPetName";
             this.labelPetName.Size = new System.Drawing.Size(0, 23);
             this.labelPetName.TabIndex = 14;
+            // 
+            // buttonFood
+            // 
+            this.buttonFood.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonFood.Location = new System.Drawing.Point(29, 464);
+            this.buttonFood.Name = "buttonFood";
+            this.buttonFood.Size = new System.Drawing.Size(125, 59);
+            this.buttonFood.TabIndex = 15;
+            this.buttonFood.Text = "Food";
+            this.buttonFood.UseVisualStyleBackColor = false;
+            this.buttonFood.Click += new System.EventHandler(this.buttonFood_Click);
+            // 
+            // buttonBed
+            // 
+            this.buttonBed.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonBed.Location = new System.Drawing.Point(160, 464);
+            this.buttonBed.Name = "buttonBed";
+            this.buttonBed.Size = new System.Drawing.Size(125, 59);
+            this.buttonBed.TabIndex = 16;
+            this.buttonBed.Text = "Bed";
+            this.buttonBed.UseVisualStyleBackColor = false;
+            this.buttonBed.Click += new System.EventHandler(this.buttonBed_Click);
+            // 
+            // buttonHug
+            // 
+            this.buttonHug.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonHug.Location = new System.Drawing.Point(291, 464);
+            this.buttonHug.Name = "buttonHug";
+            this.buttonHug.Size = new System.Drawing.Size(125, 59);
+            this.buttonHug.TabIndex = 17;
+            this.buttonHug.Text = "Hug";
+            this.buttonHug.UseVisualStyleBackColor = false;
+            this.buttonHug.Click += new System.EventHandler(this.buttonHug_Click);
+            // 
+            // labelActionPoints
+            // 
+            this.labelActionPoints.AutoSize = true;
+            this.labelActionPoints.Location = new System.Drawing.Point(29, 552);
+            this.labelActionPoints.Name = "labelActionPoints";
+            this.labelActionPoints.Size = new System.Drawing.Size(69, 13);
+            this.labelActionPoints.TabIndex = 18;
+            this.labelActionPoints.Text = "Action Points";
+            // 
+            // labelPetNameTitle
+            // 
+            this.labelPetNameTitle.AutoSize = true;
+            this.labelPetNameTitle.Location = new System.Drawing.Point(359, 552);
+            this.labelPetNameTitle.Name = "labelPetNameTitle";
+            this.labelPetNameTitle.Size = new System.Drawing.Size(57, 13);
+            this.labelPetNameTitle.TabIndex = 19;
+            this.labelPetNameTitle.Text = "Pet Name:";
             // 
             // PetView
             // 
@@ -223,6 +279,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(586, 603);
+            this.Controls.Add(this.labelPetNameTitle);
+            this.Controls.Add(this.labelActionPoints);
+            this.Controls.Add(this.buttonHug);
+            this.Controls.Add(this.buttonBed);
+            this.Controls.Add(this.buttonFood);
             this.Controls.Add(this.labelPetName);
             this.Controls.Add(this.progressBarAction);
             this.Controls.Add(this.progressBarSleep);
@@ -269,6 +330,11 @@
         private System.Windows.Forms.ProgressBar progressBarAction;
         private System.Windows.Forms.Timer ActionTimer;
         private System.Windows.Forms.Label labelPetName;
+        private System.Windows.Forms.Button buttonFood;
+        private System.Windows.Forms.Button buttonBed;
+        private System.Windows.Forms.Button buttonHug;
+        private System.Windows.Forms.Label labelActionPoints;
+        private System.Windows.Forms.Label labelPetNameTitle;
     }
 }
 

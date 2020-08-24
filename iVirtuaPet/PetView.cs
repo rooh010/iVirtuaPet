@@ -119,5 +119,20 @@ namespace iVirtuaPet
         {
             PetObj.ActionTick();
         }
+
+        private void buttonFood_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonHug_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
