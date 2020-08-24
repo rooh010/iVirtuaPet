@@ -56,8 +56,11 @@ namespace iVirtuaPet
         }
 
         public void HungerTick()
-        { 
+        {
+            if (HungerLevel > 0)
+            {
                 HungerLevel = HungerLevel - 1;
+            }
         }
     }
 }

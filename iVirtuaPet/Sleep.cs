@@ -46,7 +46,10 @@ namespace iVirtuaPet
 
         public void SleepTick()
         {
+            if (SleepLevel > 0)
+            {
                 SleepLevel = SleepLevel - 1;
+            }
         }
 
         public Sleep()
